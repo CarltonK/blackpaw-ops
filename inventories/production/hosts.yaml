@@ -1,0 +1,16 @@
+all:
+  children:
+    production_servers:
+      hosts:
+        folklore:
+          ansible_host: 10.8.0.6
+          # ansible_user: blackpaw
+          ansible_python_interpreter: /usr/bin/python3
+        berrybox:
+          ansible_host: 10.8.0.10
+          # ansible_user: blackpaw
+          ansible_python_interpreter: /usr/bin/python3
+        alltime:
+          ansible_host: 10.8.0.14
+          # ansible_user: blackpaw
+          ansible_python_interpreter: /usr/bin/python3

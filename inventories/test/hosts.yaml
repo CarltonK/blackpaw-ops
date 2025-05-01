@@ -1,0 +1,8 @@
+all:
+  children:
+    test_servers:
+      hosts:
+        internal_server:
+          ansible_host: 10.8.0.1
+          ansible_user: blackpaw
+          ansible_python_interpreter: /usr/bin/python3
