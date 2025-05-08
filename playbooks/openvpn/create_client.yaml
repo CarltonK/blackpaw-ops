@@ -1,0 +1,43 @@
+---
+- name: Generate OpenVPN client configuration
+  hosts: vpn_server
+  become: yes
+  vars:
+    client_name: {{ client_name }}
+    openvpn_ca_path: /home/blackpaw/openvpn-ca
+    openvpn_output_path: "{{ openvpn_ca_path }}/output"
+    client_conf_path: /etc/openvpn/client
+  tasks:
+    - name: Generate client key request
+      command: ./easyrsa gen-req {{ client_name }} nopass
+      args:
+        chdir: "{{ openvpn_ca_path }}"
+      register: genreq_output
+
+    - name: Sign the client certificate request
+      command: ./easyrsa sign-req client {{ client_name }}
+      args:
+        chdir: "{{ openvpn_ca_path }}"
+      register: signreq_output
+      environment:
+        EASYRSA_BATCH: "yes"
+
+    - name: Copy client certificate to OpenVPN client folder
+      copy:
+        src: "{{ openvpn_ca_path }}/pki/issued/{{ client_name }}.crt"
+        dest: "{{ client_conf_path }}/{{ client_name }}.crt"
+        remote_src: yes
+
+    - name: Generate .ovpn client config
+      command: ./config_gen.sh {{ client_name }}
+      args:
+        chdir: "{{ openvpn_ca_path }}"
+      register: config_output
+
+    - name: Display generated .ovpn content
+      command: cat "{{ openvpn_output_path }}/{{ client_name }}.ovpn"
+      register: ovpn_content
+
+    - name: Print .ovpn configuration
+      debug:
+        msg: "{{ ovpn_content.stdout }}"
