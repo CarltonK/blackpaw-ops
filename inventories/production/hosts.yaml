@@ -4,13 +4,25 @@ all:
       hosts:
         folklore:
           ansible_host: 10.8.0.6
-          # ansible_user: blackpaw
           ansible_python_interpreter: /usr/bin/python3
         berrybox:
           ansible_host: 10.8.0.10
-          # ansible_user: blackpaw
           ansible_python_interpreter: /usr/bin/python3
         alltime:
           ansible_host: 10.8.0.14
-          # ansible_user: blackpaw
+          ansible_python_interpreter: /usr/bin/python3
+        mwihaki:
+          ansible_host: 10.8.0.18
+          ansible_python_interpreter: /usr/bin/python3
+        firdahsfitness:
+          ansible_host: 10.8.0.22
+          ansible_python_interpreter: /usr/bin/python3
+        254home:
+          ansible_host: 10.8.0.26
+          ansible_python_interpreter: /usr/bin/python3
+        errandsbyeve:
+          ansible_host: 10.8.0.30
+          ansible_python_interpreter: /usr/bin/python3
+        hakiqa:
+          ansible_host: 10.8.0.34
           ansible_python_interpreter: /usr/bin/python3
