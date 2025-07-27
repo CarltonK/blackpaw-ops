@@ -10,8 +10,9 @@
       - wget
       - git
       - unzip
+      - openvpn
 
-- name: Ensure Python is installed
-  raw: test -e /usr/bin/python || (apt -y update && apt install -y python3)
-  changed_when: false
-  tags: python
+# - name: Ensure Python is installed
+#   raw: test -e /usr/bin/python || (apt -y update && apt install -y python3)
+#   changed_when: false
+#   tags: python
