@@ -14,7 +14,7 @@ all:
         mwihaki:
           ansible_host: 10.8.0.18
           ansible_python_interpreter: /usr/bin/python3
-        firdahsfitness:
+        fridahsfitness:
           ansible_host: 10.8.0.22
           ansible_python_interpreter: /usr/bin/python3
         254home:
