@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "file:///home/mark/.vscode/extensions/atlassian.atlascode-3.8.13/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+        "https://raw.githubusercontent.com/ansible/ansible-lint/main/src/ansiblelint/schemas/ansible.json#/$defs/tasks": "file:///home/mark/Repositories/Blackpaw/blackpaw-ops/roles/common/tasks/main.yaml"
+    }
+}

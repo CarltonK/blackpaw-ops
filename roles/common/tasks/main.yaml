@@ -1,5 +1,6 @@
 ---
 - name: Install basic packages
+  become: true
   apt:
     name: "{{ packages }}"
     state: present
