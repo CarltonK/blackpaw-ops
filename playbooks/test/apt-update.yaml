@@ -1,7 +1,7 @@
 ---
 - name: APT Update
   hosts: all
-  become: yes
+  become: true
 
   vars:
     ansible_roles_path: "../../roles"
