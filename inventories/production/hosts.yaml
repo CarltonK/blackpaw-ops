@@ -26,3 +26,21 @@ all:
         hakiqa:
           ansible_host: 10.8.0.34
           ansible_python_interpreter: /usr/bin/python3
+        elighting:
+          ansible_host: 10.8.0.38
+          ansible_python_interpreter: /usr/bin/python3
+        houseoftuck:
+          ansible_host: 10.8.0.42
+          ansible_python_interpreter: /usr/bin/python3
+        xtrim:
+          ansible_host: 10.8.0.46
+          ansible_python_interpreter: /usr/bin/python3
+        mizizi:
+          ansible_host: 10.8.0.50
+          ansible_python_interpreter: /usr/bin/python3
+        noist:
+          ansible_host: 10.8.0.54
+          ansible_python_interpreter: /usr/bin/python3
+        shambatopia:
+          ansible_host: 10.8.0.66
+          ansible_python_interpreter: /usr/bin/python3
