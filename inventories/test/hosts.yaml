@@ -4,7 +4,5 @@ all:
       hosts:
         hakiqa:
           ansible_host: 10.8.0.34
-          ansible_user: blackpaw
-          ansible_become: true
-          ansible_become_method: sudo
+          ansible_user: root
           ansible_python_interpreter: /usr/bin/python3
